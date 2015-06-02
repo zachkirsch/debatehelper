@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/client_detection.js"></script> <!-- Javascript Client Detection -->
+<script>
+	function onload() {
+		os = jscd.os; // Javascript Client Detection
+		if (os == "Mac OS X")
+			alert("Mac");
+		else if (os == "Windows")
+			alert("Windows");
+		else alert("Incompatible");
+	}
+</script>
+</head>
+<body onload="onload()">
+</body>
+</html>
