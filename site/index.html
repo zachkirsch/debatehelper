@@ -45,10 +45,10 @@
 					}
 				});
 	
-				$( "#download-mac" ).click( function() {
+				$( ".download-mac" ).click( function() {
 					window.location.href = "mac.html";
 				});
-				$( "#download-windows" ).click( function() {
+				$( ".download-windows" ).click( function() {
 					window.location.href = "windows.html";
 				});
 				
@@ -107,18 +107,26 @@
 					<br>
 					<br>
 					<br>
-				<div id="download-buttons"> 
-					<button type="button" class="btn btn-xlg btn-primary" id="download">Download</button>
-					<div class="btn-group" role="group" id="os-options">
-						<button type="button" class="btn btn-xlg btn-primary" id="download-mac">Mac</button>
-						<button type="button" class="btn btn-xlg btn-primary" id="download-windows">Windows</button>
+				<div class="download-buttons" id="download"> 
+					<button type="button" class="btn btn-xlg btn-primary">Download</button>
+				</div>
+				<div id="os-options">
+					<div class="download-buttons" id="download-buttons-together"> 
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-xlg btn-primary download-mac">Mac</button>
+							<button type="button" class="btn btn-xlg btn-primary download-windows">Windows</button>
+						</div>
+					</div>
+					<div class="download-buttons" id="download-buttons-separate"> 
+						<button type="button" class="btn btn-xlg btn-primary download-mac">Mac</button>
+						<button type="button" class="btn btn-xlg btn-primary download-windows">Windows</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<footer class="footer">
 		  <div class="container">
-			<p class="text-center text-muted">Created by <a href="http://zachkirsch.com">Zach Kirsch</a></p>
+			<p class="text-center text-muted">Created by <a href="http://zachkirsch.com" target="_blank">Zach Kirsch</a></p>
 		  </div>
     	</footer>
 	</body>

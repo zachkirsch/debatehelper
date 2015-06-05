@@ -22,8 +22,11 @@ h1 {
 	text-align: center;
 }
 
-#download-buttons {
+.download-buttons {
 	text-align: center;
+}
+#download-buttons-separate{
+	display: none;
 }
 
 .btn-xlg {
@@ -33,6 +36,28 @@ h1 {
     -webkit-border-radius: 8px;
        -moz-border-radius: 8px;
             border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .btn-xlg {
+    padding:18px 50px;
+  }
+  .req-divider {
+	display: none;
+  }
+}
+@media (max-width: 992px) {
+  #download-buttons-together {
+	display: none;
+  }
+  #download-buttons-separate {
+	display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+	.rwd-break {
+		display: none;
+	}
 }
 
 .btn-primary,
