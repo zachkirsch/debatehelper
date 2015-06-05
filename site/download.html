@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Download</title>
+		<meta name="description" content="DebateHelper Template for Public Forum Debate">
+	    <meta name="author" content="Zach Kirsch">
+
+		<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+
+		<!-- Bootstrap compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Bootstrap theme CSS -->
+		<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+
+		<!-- My CSS -->
+		<link rel="stylesheet" href="css/master.css">
+
+		<!-- JQuery -->
+		<script src="js/jquery-2.1.4.min.js"></script>
+
+		<!-- Bootstrap compiled and minified JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- JS Client Detection -->
+		<script src="js/client_detection.js"></script>
+		
+		<script>
+			$( document ).ready(function() {
+				os = jscd.os; // Javascript Client Detection
+				
+				$( "#download-mac" ).click( function() {
+					window.location.href = "mac.html";
+				});
+				$( "#download-windows" ).click( function() {
+					window.location.href = "windows.html";
+				});
+				$( "#nav-download" ).click(function() {
+					if (os == "Mac OS X")
+						window.location.href = "mac.html";
+					else if (os == "Windows")
+						window.location.href = "windows.html";
+					else window.location.href = "download.html";
+					return false;
+				});
+			});
+		</script>
+
+		<!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-63800415-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	</head>
+	<body role="document">
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href=".">DebateHelper</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href=".">Home</a></li>
+				<li id="nav-download" class="active"><a href="">Download</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="http://vbriefly.com/pf-rankings/" target="_blank">Rankings</a></li>
+				<li><a href="donate.html">Donate</a></li>
+          	  </ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</nav>
+		<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="container theme-showcase" role="main">
+			<div class="jumbotron">
+				<h1>Download</h1>
+					<p>DebateHelper is a Microsoft Word based template for Public Forum debate that makes it easier to do research and stay organized. DebateHelper is free and available for both Windows and Mac.</p>
+					<br>
+					<br>
+					<br>
+				<div id="download-buttons"> 
+					<div class="btn-group" role="group" id="os-options">
+						<button type="button" class="btn btn-xlg btn-primary" id="download-mac">Mac</button>
+						<button type="button" class="btn btn-xlg btn-primary" id="download-windows">Windows</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+		  <div class="container">
+			<p class="text-center text-muted">Created by <a href="http://zachkirsch.com">Zach Kirsch</a></p>
+		  </div>
+    	</footer>
+	</body>
+</html>
