@@ -1,6 +1,6 @@
 #!/bin/bash
-HOST=107.180.14.243 #This is the FTP servers host or IP address.
-USER=zachkirsch2    #This is the FTP user that has access to the server.
+HOST=ftp.zachkirsch.com #This is the FTP servers host or IP address.
+USER=zachkirsch         #This is the FTP user that has access to the server.
 
 # Read Password
 echo -n "Password: "
