@@ -1,6 +1,6 @@
 #!/bin/bash
-HOST=ftp.zachkirsch.com  #This is the FTP servers host or IP address.
-USER=zachkirsch          #This is the FTP user that has access to the server.
+HOST=ftp.zachkirsch.com #This is the FTP servers host or IP address.
+USER=debatehelper@zachkirsch.com #This is the FTP user that has access.
 
 # Read Password
 echo -n "Password: "
@@ -12,8 +12,6 @@ read -s PASS
 ftp -in << EOF
 open $HOST
 user $USER $PASS
-cd public_html
-cd debatehelper.com
 
 mkdir css
 mkdir static
