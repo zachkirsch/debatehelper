@@ -87,12 +87,7 @@ h1 {
 	cursor: pointer;
 }
 .btn-donate {
-}
-#paypal {
-	text-align: left;
-}
-#venmo {
-	text-align: right;
+	text-align: center;
 }
 
 /* Sticky footer styles
