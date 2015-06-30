@@ -28,6 +28,9 @@
 		
 		<!-- JS Client Detection -->
 		<script src="js/client_detection.js"></script>
+
+		<!-- Venmo -->
+		<script src='https://platform.venmo.com/sdk.js'></script>
 		
 		<script>
 			$( document ).ready(function() {
@@ -106,7 +109,7 @@
 				<p class="text-justify">DebateHelper is honor-ware, which means <strong>you pay what you want</strong>. It will always be available for free to any debater that wants it. The time I have put into it is uncompensated and the cost of hosting it online comes out of my own pocket. If you're happy with DebateHelper and you feel inclined to donate, I really appreciate it.</p>
 				<br>
 				<!-- Paypal Donate Button -->
-				<div id="btn-donate">
+				<div class="btn-donate">
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 					<input type="hidden" name="cmd" value="_s-xclick">
 					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHLwYJKoZIhvcNAQcEoIIHIDCCBxwCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBUP5XjkPdiyhOT74qYRdmFCuz17dQYbHHtFWHryuWP+aDQGUnnbOFJpGgoVW5GqLcoDkLxZgOvyGrao0XXLZRc/Kmn4Gc7rnHw2KzhxL9L7tGuibObzMCN10K2zwr1vBJ1wTBbAVvnqMgtUmPMpywWyA+sg809s1Ocr9IXr7r9fDELMAkGBSsOAwIaBQAwgawGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIbl6EcUbVKkSAgYgkaFsSwdxmlvxoCLvPoZgIfz8w3uuLRdwZmlx+DSVvu0raywGEdt0fNgvtUBJ0fEkpQ9XcHiiWVLD1mVf6NTa26a3wh3i0/AiIT2AfqAIQu5p63xECVJknxwcxFovzVx1Cm0T+D1sP+38lcNmcL5dE7B/Qy+BKkBPoE+v8AC653NuQwxt+uZNsoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTUwNjA0MDY1ODI5WjAjBgkqhkiG9w0BCQQxFgQUY7DOvshze0fNjDRDz2qoSoQo0EQwDQYJKoZIhvcNAQEBBQAEgYB/Z6jRX71AqOg3ldJNKN3foDwrZ6DOpVwi4DTqyZ6V6FrifHZWUbq4SAVIdYAmflMQJf4qGzVOl1xLdHA/9SO2Vq5mWUFhqC2LDdesjUc8z2t1k3P54XwNlgzkE2JGU9/ieHDlofhrlhOwtQqWM4zy214/z7lViiU+L3xCgDyg4Q==-----END PKCS7-----
@@ -116,6 +119,12 @@
 					</form>
 				</div>
 				<!-- End Paypal Donate Button -->
+
+				<!-- Venmo Donate Button 
+				<div class="btn-donate">
+					<a class="venmo-pay-button" data-recipient-id="1397998332411904590" data-amount="1"></a>
+				</div>
+				End Venmo Donate Button -->
 			</div>
 		</div>
 		<footer class="footer">

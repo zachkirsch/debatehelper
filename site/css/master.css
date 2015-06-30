@@ -86,7 +86,7 @@ h1 {
 #nav-download {
 	cursor: pointer;
 }
-#btn-donate {
+.btn-donate {
 	text-align: center;
 }
 
