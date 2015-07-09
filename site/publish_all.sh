@@ -14,10 +14,11 @@ open $HOST
 user $USER $PASS
 
 mkdir css
-mkdir static
 mkdir img
 mkdir php
 mkdir js
+mkdir static
+mkdir updates
 
 mput *.html
 cd css
@@ -35,6 +36,9 @@ mput *.php
 cd ../js
 lcd ../js
 mput *.js
+cd ../updates
+lcd ../updates
+mput *
 
 close
 bye
