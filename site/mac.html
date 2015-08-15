@@ -33,16 +33,6 @@
 		<script src="https://use.fonticons.com/4d05eae3.js"></script> 
 		
 		<script>
-			$(document).on('click', '.panel-heading span.clickable', function (e) {
-				var $this = $(this);
-				if (!$this.hasClass('panel-collapsed')) {
-					$this.parents('.panel').find('.panel-body').slideUp('fast');
-					$this.addClass('panel-collapsed');
-				} else {
-					$this.parents('.panel').find('.panel-body').slideDown('fast');
-					$this.removeClass('panel-collapsed');
-				}
-			});
 			$(document).on('click', '.panel div.clickable', function (e) {
 				var $this = $(this);
 				if (!$this.hasClass('panel-collapsed')) {
@@ -118,7 +108,7 @@
 					<br>
 					<br>
 				<div class="panel panel-primary">
-				  <div class="panel-heading clickable"> <!-- Start collapsed b/c toggled on document.ready -->
+				  <div class="panel-heading clickable">
 					<h3 class="panel-title">Easy Installation</h3>
 				  </div>
 				  <div class="panel-body">
