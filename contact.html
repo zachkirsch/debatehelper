@@ -60,16 +60,6 @@
           else window.location.href = "download.html";
           return false;
         });
-        $("#my-contact-form").submit(function() {
-          console.log($("#useremail").val())
-          $("#form-success").fadeIn('slow');
-
-          /* Clear the inputs */
-          $('#username, #useremail, #message').val('');
-          $("#subject").val('Question');
-
-          return true;
-        });
       });
       /* if choosing Other, replace subject dropdown with empty text box */
       function update_subject() {
@@ -129,6 +119,7 @@
           </div>
         </div>
         <form id="my-contact-form" action="https://formspree.io/help@debatehelper.com" method="POST" class="form-horizontal" role="form">
+          <input type="hidden" name="_next" value="//debatehelper.com" />
           <fieldset>
             <div class="form-group">
               <label for="username" class="col-sm-3 control-label">Name</label>
