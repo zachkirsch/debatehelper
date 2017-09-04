@@ -132,19 +132,19 @@
             <div class="form-group">
               <label for="username" class="col-sm-3 control-label">Name</label>
               <div class="col-sm-7">
-                <input id="username" name="Name" type="text" value="" required="required" class="form-control">
+                <input id="username" name="Name" type="text" required="required" class="form-control">
               </div>
             </div>
             <div class="form-group">
               <label for="useremail" class="col-sm-3 control-label">Email</label>
               <div class="col-sm-7">
-                <input id="useremail" name="_replyto" type="email" value="" required="required" class="form-control">
+                <input id="useremail" name="email" type="email" required="required" class="form-control">
               </div>
             </div>
             <div class="form-group">
               <label for="subject" class="col-sm-3 control-label">Subject</label>
               <div class="col-sm-7" id="choose-subject">
-                <select id="subject" name="_subject"  class="form-control" onchange="update_subject()">
+                <select id="subject" name="_subject" class="form-control" onchange="update_subject()">
                   <option value="Question">Question</option>
                   <option value="Bug Report">Bug Report</option>
                   <option value="Suggestion">Suggestion</option>
